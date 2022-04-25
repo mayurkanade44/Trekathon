@@ -1,13 +1,13 @@
-import logo from '../assets/images/log.png'
-import main from '../assets/images/main.svg'
-import Wrapper from '../assets/wrappers/LandingPage';
+import main from "../assets/images/main.svg";
+import Wrapper from "../assets/wrappers/LandingPage";
+import { Logo } from "../components";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <img src={logo} alt="jobster logo" className="logo" />
-        <span style={{fontSize:39, paddingLeft:8, fontWeight:700, letterSpacing:2}}>Trekathon</span>
+        <Logo />
       </nav>
       <div className="container page">
         {/* info */}
@@ -16,11 +16,11 @@ const Landing = () => {
             Treks <span>tracking</span> app
           </h1>
           <p>some text</p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to='/register' className="btn btn-hero">Login/Register</Link>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>
     </Wrapper>
   );
-}
-export default Landing
+};
+export default Landing;
